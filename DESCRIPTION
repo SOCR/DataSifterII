@@ -1,0 +1,23 @@
+Package: DataSifter2
+Type: Package
+Title: Data Sifter II Algorithm to Create Privacy-preserving Time-varying Data 
+Version: 0.1.0
+Author: Nina Zhou, Simeone Marino, Ivo D. Dinov
+Maintainer: Nina Zhou <zhounina@umich.edu>, SOCR <statistics@umich.edu> 
+Description: The DataSifter2 package contains a set of effective tools for raw data preprocessing including missing imputation, creation of information and privacy-preserving datasets from raw data that contains time-varying measurements. It obfuscates data through artifical missing introduce and longitudinal imputation. DataSifter II is aimed at maximally preserving utility while introducing a proper level of privacy protection.Time-invariant variables in the dataset are recommended to be obfuscated with DataSifter I algorithm.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports:
+  dplyr,
+  glmmLasso,
+  glmnet,
+  doParallel,
+  lme4,
+  missForest,
+  REEMtree,
+  MASS,
+  nlme
+Depends: R(>= 3.5.1)  
+Suggest: knitr,kable
+RoxygenNote: 6.1.0
