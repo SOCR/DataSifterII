@@ -18,6 +18,6 @@ Imports:
   REEMtree,
   MASS,
   nlme
-Depends: R(>= 3.1.0)  
+Depends: R (>= 3.1.0)  
 Suggest: knitr,kable
 RoxygenNote: 6.1.0
