@@ -18,6 +18,16 @@ Imports:
   REEMtree,
   MASS,
   nlme
-Depends: R (>= 3.1.0)
+Depends: 
+  R (>= 3.4.2),
+  dplyr,
+  glmmLasso,
+  glmnet,
+  doParallel,
+  lme4,
+  missForest,
+  REEMtree,
+  MASS,
+  nlme
 Suggest: knitr,kable
 RoxygenNote: 7.0.2
