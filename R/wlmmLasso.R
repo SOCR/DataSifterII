@@ -47,6 +47,6 @@ wlmmLasso <- function(x,y,yname,weights,rowid,ID="ID",lvars,
   if(svars[1]== "(Intercept)") svars<-svars[-1]
   #Fit GLMM with the selected variables and weights.
   glmmform <- as.formula(paste(yname,"~",paste(svars,collapse = "+"),paste("+(1|",ID,")",sep = "")))
-  glmmmodel <- glmer(glmmform,data = train.data,weights = weights,family = family)
+  glmmmodel <- suppressWarnings(glmer(glmmform,data = train.data,weights = weights,family = family))
   return(glmmmodel)
 }
