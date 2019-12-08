@@ -56,7 +56,7 @@ repSifterImp <- function(data,mispct,lnames,timevar,ID,maxit=10,crit=0.05){
     target <- splitdata[[1]][[2]]
     tempimp <- splitdata[[1]][[4]]
       family <- checkLink(splitdata[[1]][[1]],lnames[1])
-      temp <- filter.lambda(splitdata[[1]][[1]],lnames[1],ID,seq(500,0,-10),0,family)
+      temp <- filter_lambda(splitdata[[1]][[1]],lnames[1],ID,seq(500,0,-10),0,family)
       model <- temp[[1]]
       lambdaseq[[1]] <- temp[[2]]
     test.data<-data.frame(splitdata[[i]][[2]],splitdata[[i]][[3]])
@@ -85,14 +85,14 @@ repSifterImp <- function(data,mispct,lnames,timevar,ID,maxit=10,crit=0.05){
       }
         if(iter==0){
           family=checkLink(splitdata[[i]][[1]],lnames[i])
-          temp <- filter.lambda(splitdata[[i]][[1]],lnames[i],ID,seq(500,0,-50),50,family)
+          temp <- filter_lambda(splitdata[[i]][[1]],lnames[i],ID,seq(500,0,-50),50,family)
           model <- temp[[1]]
           print(model)
           lambdaseq[[i]] <- temp[[2]]
         } else {
           if(lambdaseq[[i]][1]!=-1){
             family=checkLink(splitdata[[i]][[1]],lnames[i])
-            temp <- filter.lambda(splitdata[[i]][[1]],lnames[i],ID,lambdaseq[[i]],family=family)
+            temp <- filter_lambda(splitdata[[i]][[1]],lnames[i],ID,lambdaseq[[i]],family=family)
             model <- temp[[1]]
           }else{
             preds<-names(splitdata[[i]][[1]])[-which(names(splitdata[[i]][[1]]) %in% c(lnames[i],"ID"))]

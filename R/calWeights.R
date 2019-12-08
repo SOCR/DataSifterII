@@ -70,7 +70,7 @@ calWeights <- function(data,lcolnames,ID,w=c("peri","perij"),timevar,method="par
       datasub[,ID] <- as.factor(as.character(datasub[,ID]))
       #Here ID must equal to "ID"
         #This gives the first Y all 1's check why!!!
-        modelmis <- filter.lambda(data=datasub,outcome = "mis",ID=ID,lambdaseq = seq(0,500,5),family = binomial(link = "logit"),startPQL = FALSE)[[1]]
+        modelmis <- filter_lambda(data=datasub,outcome = "mis",ID=ID,lambdaseq = seq(0,500,5),family = binomial(link = "logit"),startPQL = FALSE)[[1]]
         weights <- predict(modelmis,newdata = datasub[mis !=0,],type = "response")
       #print(weights)
       rownumb <- which(datasub$mis !=0)

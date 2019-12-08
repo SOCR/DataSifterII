@@ -18,7 +18,8 @@
 #' }
 #' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
-filter.lambda<-function(data,outcome,ID,lambdaseq,range=0,family=gaussian(link = "identity"),startPQL=TRUE){
+#'
+filter_lambda<-function(data,outcome,ID,lambdaseq,range=0,family=gaussian(link = "identity"),startPQL=TRUE){
   if(min(lambdaseq)<0) stop("Lambda must be greater than 0.")
   #Delete sigular values
   sname <- names(data)[which(sapply(data,function(x) length(unique(x))==1))]
