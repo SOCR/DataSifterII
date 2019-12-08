@@ -5,7 +5,7 @@
 #' @param form Formula for GLMM lasso model.
 #' @param Delta.start A scalar specifying starting value for GLMM lasso fixed effects parameters.
 #' @param q.start A scalar or matrix of suitable dimension, specifying starting values for the random-effects variance-covariance matrix.
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 try_glmmlasso<-function(lambdainp,data,family,form,Delta.start=NULL,q.start=NULL){
   d = nrow(data)+1

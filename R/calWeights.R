@@ -17,6 +17,7 @@
 #'    \item Element 1 - Inversed probability of being observed.
 #'    \item Element 2 - Row numbers of complete records in the original data.
 #' }
+#'#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #'
 #'@export
 calWeights <- function(data,lcolnames,ID,w=c("peri","perij"),timevar,method="param"){

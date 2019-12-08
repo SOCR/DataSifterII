@@ -4,8 +4,17 @@
 \alias{repSifter}
 \title{DataSifter II Algorithm for Time-varying Data}
 \usage{
-repSifter(data, mispct, misw = "perij", lnames, timevar, ID,
-  maxit = 10, crit = 0.05, cal.weights.method = "param")
+repSifter(
+  data,
+  mispct,
+  misw = "perij",
+  lnames,
+  timevar,
+  ID,
+  maxit = 10,
+  crit = 0.05,
+  cal.weights.method = "param"
+)
 }
 \arguments{
 \item{data}{A data frame contains original data to be processed. The data must be in long format. Missingness is allowed in time-varying varaibles.}

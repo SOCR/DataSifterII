@@ -9,7 +9,7 @@
 #' @param lvars Longitudinal variable names.
 #' @param family family object to specify the link function for outcome.
 #' @param withlong a logical parameter to decide if the weighted linear mixed model depends on longitudinal predictors.
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @return The GLMM LASSO model under given weights.
 wlmmLasso <- function(x,y,yname,weights,rowid,ID="ID",lvars,
                       family=gaussian(link = "identity"),withlong=FALSE){

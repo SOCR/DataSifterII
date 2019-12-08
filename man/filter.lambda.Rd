@@ -4,8 +4,15 @@
 \alias{filter.lambda}
 \title{Optimal lambda and corresponding final GLMM LASSO model}
 \usage{
-filter.lambda(data, outcome, ID, lambdaseq, range = 0,
-  family = gaussian(link = "identity"), startPQL = TRUE)
+\method{filter}{lambda}(
+  data,
+  outcome,
+  ID,
+  lambdaseq,
+  range = 0,
+  family = gaussian(link = "identity"),
+  startPQL = TRUE
+)
 }
 \arguments{
 \item{data}{A long format complete data frame.}

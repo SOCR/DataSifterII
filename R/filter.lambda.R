@@ -16,7 +16,7 @@
 #'    \item glm1 - The optimal GLMM under LASSO regularization with smallest BIC.
 #'    \item seqs - The next Lambda sequence to be considered, when further search is needed.
 #' }
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 filter.lambda<-function(data,outcome,ID,lambdaseq,range=0,family=gaussian(link = "identity"),startPQL=TRUE){
   if(min(lambdaseq)<0) stop("Lambda must be greater than 0.")

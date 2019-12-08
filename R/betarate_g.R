@@ -19,6 +19,7 @@
 #'    \item trueinorici - If the true coefficients are in the original CIs.
 #' }
 #'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 betarate_g<-function(sdata,oridata,covtrue=c(10,0.2,5,1,2),form=as.formula("Y~x1+x2+x3+visit+(1|ID)"),family=gaussian(link = "identity")){
   if(length(covtrue)!=length(unlist(strsplit(gsub(" ","",as.character(form)[3]),"[+]")))) warning("Different length between true covariates and formula.")

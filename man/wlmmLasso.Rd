@@ -4,8 +4,17 @@
 \alias{wlmmLasso}
 \title{Weighted GlmmLASSO}
 \usage{
-wlmmLasso(x, y, yname, weights, rowid, ID = "ID", lvars,
-  family = gaussian(link = "identity"), withlong = FALSE)
+wlmmLasso(
+  x,
+  y,
+  yname,
+  weights,
+  rowid,
+  ID = "ID",
+  lvars,
+  family = gaussian(link = "identity"),
+  withlong = FALSE
+)
 }
 \arguments{
 \item{x}{Data frame or matrix of candidate predictors time-invariant and longitudinal from the full data.}

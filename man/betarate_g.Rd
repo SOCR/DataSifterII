@@ -4,9 +4,13 @@
 \alias{betarate_g}
 \title{Sifted Data Utility Check}
 \usage{
-betarate_g(sdata, oridata, covtrue = c(10, 0.2, 5, 1, 2),
-  form = as.formula("Y~x1+x2+x3+visit+(1|ID)"), family = gaussian(link
-  = "identity"))
+betarate_g(
+  sdata,
+  oridata,
+  covtrue = c(10, 0.2, 5, 1, 2),
+  form = as.formula("Y~x1+x2+x3+visit+(1|ID)"),
+  family = gaussian(link = "identity")
+)
 }
 \arguments{
 \item{sdata}{The Sifted data frame.}

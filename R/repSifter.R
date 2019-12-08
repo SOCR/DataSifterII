@@ -17,7 +17,7 @@
 #'   \item siftdata - Sifted data frame.
 #'   \item data - Original data frame.
 #' }
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 repSifter <- function(data,mispct,misw="perij",lnames,timevar,ID,maxit=10,crit=0.05,cal.weights.method="param"){
   #input checks

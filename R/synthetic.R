@@ -11,7 +11,7 @@
 #' @param N The number of closest records to be considered as neighborhood.
 #'
 #' @return Fully synthetic Sifted data.
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 synthetic <- function(data,lnames,timevar,ID,N){#Data must be in long format
 

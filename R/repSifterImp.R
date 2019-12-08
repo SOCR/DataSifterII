@@ -8,6 +8,9 @@
 #' @param ID Name of the ID variable in the dataset.
 #' @param maxit Maximal iteration. The default is 10 times.
 #' @param crit Critical value for the stopping criteria. The default is 0.05, which stops the algorithm when the absolute deviance of the imputed and original value is within 5\% of the original values.
+#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
+#' @export
 
 
 repSifterImp <- function(data,mispct,lnames,timevar,ID,maxit=10,crit=0.05){

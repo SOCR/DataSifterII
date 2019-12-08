@@ -4,7 +4,7 @@
 #' @param lnames A vector of the longitudinal varaible names.
 #' @param timevar Name of the visit time variable.
 #' @param ID Name of the ID variable.
-#'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 CVCF<-function(data, lnames, timevar, ID){
   #data=dataname, lnames=longitudinal variable names, timevar= time variable name

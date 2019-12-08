@@ -4,8 +4,14 @@
 \alias{try_glmmlasso}
 \title{Calculating the BIC of a GLMM lasso model, given specific lambda.}
 \usage{
-try_glmmlasso(lambdainp, data, family, form, Delta.start = NULL,
-  q.start = NULL)
+try_glmmlasso(
+  lambdainp,
+  data,
+  family,
+  form,
+  Delta.start = NULL,
+  q.start = NULL
+)
 }
 \arguments{
 \item{lambdainp}{Lambda parameter for the GLMM lasso model.}

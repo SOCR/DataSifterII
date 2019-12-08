@@ -4,8 +4,14 @@
 \alias{calWeights}
 \title{Calculate sampling weights for raw data imputation.}
 \usage{
-calWeights(data, lcolnames, ID, w = c("peri", "perij"), timevar,
-  method = "param")
+calWeights(
+  data,
+  lcolnames,
+  ID,
+  w = c("peri", "perij"),
+  timevar,
+  method = "param"
+)
 }
 \arguments{
 \item{data}{Original data (numerical variables only) with missing values.}
@@ -26,6 +32,7 @@ A list contains two elements.
    \item Element 1 - Inversed probability of being observed.
    \item Element 2 - Row numbers of complete records in the original data.
 }
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 }
 \description{
 Use logistic regression or GLMM with LASSO regularity to model missingness for time-varying correlated data.

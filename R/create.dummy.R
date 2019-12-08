@@ -5,6 +5,7 @@
 #'
 #' @return A long format data with time-invariant factor/categorical variables changed to dummy variables.
 #'
+#' @import dplyr glmmLasso glmnet doParallel lme4 missForest REEMtree MASS nlme
 #' @export
 create.dummy <- function(data,cs.names=NULL){
   names.list <- names(data)

@@ -4,8 +4,7 @@
 \alias{repSifterImp}
 \title{Artificial Missing Introduce and Imputation Step}
 \usage{
-repSifterImp(data, mispct, lnames, timevar, ID, maxit = 10,
-  crit = 0.05)
+repSifterImp(data, mispct, lnames, timevar, ID, maxit = 10, crit = 0.05)
 }
 \arguments{
 \item{data}{A data frame contains original data to be processed. The data must be in long format. Missingness is allowed in time-varying varaibles.}
