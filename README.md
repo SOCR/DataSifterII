@@ -1,13 +1,35 @@
-# DataSifter II: Statistical Obfuscation of Sensitive Time-varying Correlated Data
+# DataSifter II
 
-## Authors
-Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, and Ivo Dinov
+**Statistical Obfuscation of Sensitive Time-varying Correlated Data**
 
-## Example
+<a href="http://socr.umich.edu/"><img align="middle" src="http://socr.umich.edu/HTML5/DataSifter/img/DataSifter_V1_FrameworkDiagram.png"></a>
 
-### Load Package
+Table of contents
+=================
 
-Install both DataSifter I and II.
+<!--tc-->
+   * [Table of contents](#table-of-contents)
+   * [Overview](#overview)
+   * [Authors](#authors)
+   * [Example](#example)
+   * [References](#references)
+<!--tc-->
+
+Overview
+========
+The *DataSifter* provides critical supportr for collaborative data sharing, open-science networking, and secure information exchange. In its core, teh DataSifter implements a novel statistical obfusction technique that optimizes privacy protection (for secure and safe information exchange) and utility (preservation of hte information content and analytical value) of datasets. 
+
+Authors
+=======
+Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and hte [SOCR Team](http://www.socr.umich.edu/people/).
+
+Example
+=======
+
+# Load Package
+
+Install both *DataSifter I* and *II*.
+
 ```{r}
 library(devtools)
 install_github("SOCR/DataSifterII")
@@ -16,7 +38,7 @@ library(DataSifterII)
 library(DataSifter.lite)
 ```
 
-### Create Sifted dataset
+# Create Sifted dataset
 
 Obfuscate time-varying and time-invariant data seperately.
 
@@ -36,9 +58,9 @@ sifter_sim_cs <- dataSifter(level="medium",data = sim_cs,subjID = "ID",nomissing
 #Merging two together
 siftsim_final <- left_join(siftsim[[1]] %>% dplyr::select(c("ID","visit","Y","K")),
                            cbind(ID=as.factor(sim_cs$ID),sifter_sim_cs),by="ID")
-
 ```
-### Test Privacy and Utility
+
+# Test the Balance between Privacy and Utility
 
 The generating models for Y and K are
 
@@ -49,6 +71,10 @@ and E(K)=15+12\*Y+5\*X<sub>4</sub>+10\*X<sub>5</sub>+2\*visit.
 ```{r}
 #Data Privacy
 boxplot(pifv(sim,siftsim_final))
+
+# define original coefficients for simulation model
+orig_coeff  <- c(10, 20, -15, -6, 0.8)
+k_orig_coeff <- c(15, 12, 5, 10, 2)
 
 #Data utility
 library(nlme)
@@ -61,3 +87,16 @@ Kmodel <- lme(K~Y+x4+x5+visit,random = ~1|ID,data=siftsim_final)
 summary(Kmodel)
 intervals(Kmodel)
 ```
+
+Compare the actual simulation-model coefficients and the estimated coefficients by fitting the model on the sifted data.
+
+```{r}
+data.frame(cbind(Ymodel$coefficients$fixed, orig_coeff))
+data.frame(cbind(Kmodel$coefficients$fixed, k_orig_coeff))
+```
+
+References
+==========
+
+* [DataSifter website](http://datasifter.org)
+* Marino, S, Zhou, N, Zhao, Yi, Wang, L, Wu Q, and Dinov, ID. (2019) [DataSifter: Statistical Obfuscation of Electronic Health Records and Other Sensitive Datasets](https://doi.org/10.1080/00949655.2018.1545228), Journal of Statistical Computation and Simulation, 89(2): 249–271, DOI: 10.1080/00949655.2018.1545228.
