@@ -17,11 +17,11 @@ Table of contents
 
 Overview
 ========
-The *DataSifter* provides critical supportr for collaborative data sharing, open-science networking, and secure information exchange. In its core, teh DataSifter implements a novel statistical obfusction technique that optimizes privacy protection (for secure and safe information exchange) and utility (preservation of hte information content and analytical value) of datasets. 
+The *DataSifter* provides critical support for collaborative data sharing, open-science networking, and secure information exchange. In its core, the DataSifter implements a novel statistical obfuscation technique that optimizes privacy protection (for secure and safe information exchange) and utility (preservation of the information content and analytical value) of datasets. 
 
 Authors
 =======
-Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and hte [SOCR Team](http://www.socr.umich.edu/people/).
+Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and the [SOCR Team](http://www.socr.umich.edu/people/).
 
 Example
 =======
@@ -40,7 +40,7 @@ library(DataSifter.lite)
 
 # Create Sifted dataset
 
-Obfuscate time-varying and time-invariant data seperately.
+Obfuscate time-varying and time-invariant data separately.
 
 ```{r}
 data(sim)
