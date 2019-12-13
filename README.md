@@ -23,12 +23,13 @@ Authors
 =======
 Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and the [SOCR Team](http://www.socr.umich.edu/people/).
 
+
 Example
 =======
 
 # Load Package
 
-Install both *DataSifter I* and *II*.
+Install both, the light-weight version [DataSifter-Lite (V 1.0)](https://github.com/SOCR/DataSifter) and this new and expanded version *DataSifter II*.
 
 ```{r}
 library(devtools)
@@ -98,5 +99,6 @@ data.frame(cbind(Kmodel$coefficients$fixed, k_orig_coeff))
 References
 ==========
 
+* [DataSifter-Lite (V 1.0)](https://github.com/SOCR/DataSifter) 
 * [DataSifter website](http://datasifter.org)
 * Marino, S, Zhou, N, Zhao, Yi, Wang, L, Wu Q, and Dinov, ID. (2019) [DataSifter: Statistical Obfuscation of Electronic Health Records and Other Sensitive Datasets](https://doi.org/10.1080/00949655.2018.1545228), Journal of Statistical Computation and Simulation, 89(2): 249–271, DOI: 10.1080/00949655.2018.1545228.
