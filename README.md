@@ -17,7 +17,7 @@ Table of contents
 
 Overview
 ========
-The *DataSifter* provides critical support for collaborative data sharing, open-science networking, and secure information exchange. In its core, the DataSifter implements a novel statistical obfuscation technique that optimizes privacy protection (for secure and safe information exchange) and utility (preservation of the information content and analytical value) of datasets. 
+The *DataSifter* provides critical support for collaborative data sharing, open-science networking, and secure information exchange. In its core, the DataSifter implements a novel statistical obfuscation technique that optimizes privacy protection (for secure and safe information exchange) and utility (preservation of the information content and analytical value) of datasets. Simulation codes can be found in the `Simulation Studies` folder.
 
 Authors
 =======
