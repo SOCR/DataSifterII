@@ -2,7 +2,7 @@
 
 **Statistical Obfuscation of Sensitive Time-varying Correlated Data**
 
-<a href="http://socr.umich.edu/"><img align="middle" src="http://socr.umich.edu/HTML5/DataSifter/img/DataSifter_V1_FrameworkDiagram.png"></a>
+<a href="https://socr.umich.edu/"><img align="middle" src="https://raw.githubusercontent.com/SOCR/DataSifterII/master/data/DataSifter_V1_FrameworkDiagram.png"></a>
 
 Table of contents
 =================
@@ -21,7 +21,7 @@ The *DataSifter* provides critical support for collaborative data sharing, open-
 
 Authors
 =======
-Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and the [SOCR Team](http://www.socr.umich.edu/people/).
+Nina Zhou, Lu Wang, Simeone Marino, Yi Zhao, Ivo Dinov and the [SOCR Team](https://www.socr.umich.edu/people/).
 
 
 Example
